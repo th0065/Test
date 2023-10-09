@@ -1,0 +1,27 @@
+<div class="container wrapper wrapper2">
+    <div class="row">
+        <!-- Form -->
+        <div class="col-md-12">
+            <h3>Nouveau compte</h3>
+            <form [formGroup]="addForm" method="post"  (ngSubmit)="submitForm()" novalidate>
+                
+                <input type="text" hidden formControlName="id" class="form-control" maxlength="20">
+
+                
+                <div class="form-group">
+                    <label>Numero</label>
+                    <input type="text" formControlName="numero" class="form-control" maxlength="20">
+                </div>
+
+                <div class="form-group">
+                    <label>Somme</label>
+                    <input type="text" formControlName="somme" class="form-control" maxlength="20">
+                </div>
+                <input  formControlName="personne" [ngModel]="perso" class="form-control" >
+
+                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                <button type="button" routerLink="/" class="btn btn-danger mt-2">Retour</button>
+            </form>
+        </div>
+    </div>
+</div>
